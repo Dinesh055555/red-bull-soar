@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050913">
+<meta name="description" content="Red Bull SOAR companion app: fly, feel your adrenaline, edit reels and share with the SOAR community.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SOAR">
+<title>Red Bull SOAR</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="stage">
+  <!-- left board: only on laptop screens -->
+  <aside class="board left">
+    <div class="tagline">RED BULL SOAR &nbsp;|&nbsp; COMPANION APP</div>
+    <h1>Your story.<br><span>With wings.</span></h1>
+    <p>The app that flies with SOAR. Pair any smartwatch, let the Adrenaline Trigger catch your biggest moment, edit the reel in a minute and share it with the SOAR community.</p>
+    <div id="boardFeats"></div>
+    <p style="margin-top:14px"><b style="color:#fff">Open it on your phone</b><br>Scan, then tap "Add to Home Screen" to install it like an app.</p>
+    <div class="qrbox" id="siteQr"></div>
+    <button class="btn red block" id="installBtn2" style="display:none">Install app</button>
+  </aside>
+
+  <!-- the phone -->
+  <div class="device" id="device">
+    <div class="statusbar"><span id="clock">9:41</span><span>5G &nbsp; 84%</span></div>
+    <header class="appbar" id="appbar"></header>
+    <main id="main">
+      <section class="view" id="v-home"></section>
+      <section class="view" id="v-fly"></section>
+      <section class="view" id="v-create"></section>
+      <section class="view" id="v-community"></section>
+      <section class="view" id="v-profile"></section>
+      <section class="view" id="v-watch"></section>
+      <section class="view" id="v-library"></section>
+      <section class="view" id="v-spots"></section>
+      <section class="view" id="v-map"></section>
+    </main>
+    <nav class="tabbar" id="tabbar">
+      <button class="tab" data-go="home"><svg class="svg" data-i="home"></svg>Home</button>
+      <button class="tab" data-go="fly"><svg class="svg" data-i="drone"></svg>Fly</button>
+      <button class="tab fab" data-go="create"><span class="bubble"><svg class="svg" data-i="film"></svg></span>Create</button>
+      <button class="tab" data-go="community"><svg class="svg" data-i="users"></svg>Community</button>
+      <button class="tab" data-go="spots"><svg class="svg" data-i="pin"></svg>Spots</button>
+    </nav>
+    <div class="scrim" id="scrim"></div>
+    <div class="sheet" id="sheet"><div class="grab"></div><button class="iconbtn sheetx" data-act="closesheet" aria-label="Close"><svg class="svg" data-i="x"></svg></button><div id="sheetBody"></div></div>
+    <div class="toast" id="toast"></div>
+    <div class="onb" id="onb"></div>
+  </div>
+
+  <!-- right board: guided demo -->
+  <aside class="board right">
+    <div class="tagline">TRY IT IN 60 SECONDS</div>
+    <h1 style="font-size:22px">Guided demo</h1>
+    <p>Tap a step and the phone jumps there.</p>
+    <div id="demoSteps"></div>
+    <p class="tiny" style="margin-top:12px">Real heart rate pairing works in Chrome on Android and laptops with Bluetooth. Every other screen works on any phone. Demo mode simulates the drone and the watch.</p>
+  </aside>
+</div>
+
+<input type="file" id="fileVideo" accept="video/*,image/*" hidden>
+<input type="file" id="filePost" accept="image/*,video/*" hidden>
+
+<script src="vendor/qrcode.js"></script>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="app.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>

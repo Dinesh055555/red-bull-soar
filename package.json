@@ -1,0 +1,14 @@
+{
+  "name": "red-bull-soar-app",
+  "version": "1.0.0",
+  "description": "Red Bull SOAR companion app prototype: fly, Adrenaline Trigger, reel editor, SOAR Wall community, Experiences booking.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
